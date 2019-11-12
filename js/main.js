@@ -79,7 +79,7 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["Techno Chaman", "Maker", "Artisan 2.0", "Pro numérique anti capitaliste", "Anti numérique"],
+      strings: ["e suis Aurelien Conil", "e machine l'insolite", "'active l'interactivité", "e prototype comme un pro", "e fais rêver les robots"],
       typeSpeed: 100,
       loop: true,
     });
