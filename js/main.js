@@ -79,7 +79,7 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["e suis Aurelien Conil", "e machine l'insolite", "'active l'interactivité", "e prototype comme un pro", "e fais rêver les robots"],
+      strings: ["e m'appelle Aurelien Conil", "e machine l'insolite", "'active l'interactivité", "e prototype en mode pro", "e fais rêver les robots", "'apprend de mes érreurs"],
       typeSpeed: 100,
       loop: true,
     });
