@@ -79,9 +79,10 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["e m'appelle Aurelien Conil", "e machine l'insolite", "'active l'interactivité", "e prototype en mode pro", "e fais rêver les robots", "'apprend de mes érreurs"],
-      typeSpeed: 100,
+      strings: [ "Je machine l'insolite", "J'active l'interactivité", "Je prototype en mode pro", "Je fais rêver les robots", "J'apprend de mes érreurs"],
+      typeSpeed: 80,
       loop: true,
+      showCursor: true
     });
   });
 
