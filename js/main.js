@@ -79,7 +79,7 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: [ "Créateur de machines et d'histoires", "Une pointe de rétrofuturisme", "De l'art et du vivant"],
+      strings: [ "Je machine l'insolite", "J'active l'interactivité", "Je prototype en mode pro", "Je fais rêver les robots", "J'apprend de mes érreurs"],
       typeSpeed: 80,
       loop: true,
       showCursor: true
