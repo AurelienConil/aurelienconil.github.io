@@ -37,19 +37,22 @@
     </div>
   </div>
 
+  <div class="my-5">
 
-  <div id="canvas-container"></div>
+  </div>
 
-  <div class="container retro-menu">
-    <div class="row">
-      <div class="col-12 col-lg-5 my-5 order-2 order-lg-1">
+
+  <div id="canvas-container" class="no-margin"></div>
+
+  <div class="container retro-menu  no-margin">
+    <div class="row no-margin">
+      <div class="col-12 col-lg-5 my-5 order-2 order-lg-1 no-margin ">
         <a href="http://aurelienconil.fr/digital-artist/" class="btn-retro"><span id="btn1"></span></a>
       </div>
-      <div class="col-12 col-lg-1 my-5 order-1 order-lg-2">
+      <div class="col-12 col-lg-1 my-5 order-1 order-lg-2 no-margin ">
         <span class="bi bi-arrow-down-circle arrow" onclick="changeNext()"></span>
-
       </div>
-      <div class="col-12 col-lg-5 my-5  order-3 order-lg-3">
+      <div class="col-12 col-lg-5 my-5  order-3 order-lg-3 no-margin ">
         <a href="http://aurelienconil.github.io/friction" class="btn-retro"><span id="btn2"></span></a>
       </div>
     </div>
@@ -74,6 +77,32 @@
         btn2.textContent = "R&D Prototyping";  // Texte en anglais
       }
     }
+
+
+    function adjustCanvasScale() {
+      var canvasContainer = document.getElementById('canvas-container');
+      var windowWidth = window.innerWidth;
+
+      // La largeur cible que tu veux atteindre
+      var targetWidth = 950;
+
+      // Calculer le facteur de mise à l'échelle
+      var scaleValue = windowWidth / targetWidth;
+
+      // Limiter la valeur entre 0.5 et 1 pour éviter les déformations excessives
+      scaleValue = Math.min(Math.max(scaleValue, 0.2), 1);
+
+      // Appliquer la transformation sur le container
+      canvasContainer.style.transform = 'translate(0px, 100px)';
+      canvasContainer.style.transform = 'scale(' + scaleValue + ')';
+    }
+
+    // Appeler la fonction au chargement de la page
+    adjustCanvasScale();
+
+    // Ajouter un écouteur d'événement pour ajuster la mise à l'échelle lors du redimensionnement de la fenêtre
+    window.addEventListener('resize', adjustCanvasScale);
+
 
     // Initialisation avec la langue par défaut (français)
     changeLanguage('en');

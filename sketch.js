@@ -31,9 +31,18 @@ function setup() {
   currentWord = int(random(words.length));
   targetWordFromRandom(words[currentWord]);
   //cnv = createCanvas(windowWidth, windowHeight, WEBGL);
-  cnv = createCanvas(windowWidth, 400, WEBGL);
+
+  //Create Canva, according to Desktop / Mob
+  if (windowWidth < 900) {
+    cnv = createCanvas(900, 300, WEBGL);
+  } else {
+    cnv = createCanvas(windowWidth, 500, WEBGL);
+
+  }
+
+
   cnv.parent('canvas-container'); // Attach the canvas to the container with ID 'canvas-container'
-  pixelDensity(1);
+  pixelDensity(0.8);
   sz = min(width, height);
   paintShader = createShader(vertexShaderSrc, paintShaderSrc);
   voronoiShader = createShader(vertexShaderSrc, voronoiShaderSrc);
@@ -119,7 +128,9 @@ function triggerEvent(eventType) {
 }
 
 function changeNext() {
-  currentWord = (currentWord++) % words.length
+  currentWord += 1
+  currentWord = currentWord % words.length
+  console.log("current world = " + currentWord);
   targetWordFromRandom(words[currentWord]);
   lastReset = millis() * 0.0001;
 
@@ -167,9 +178,9 @@ function keyPressed() {
 
 function draw() {
 
+  background(120);
   let t = millis() * 0.0001;
 
-  background(127);
   let displayOpengl = true;
 
   for (let segment of segments) {
@@ -294,8 +305,10 @@ function draw() {
   // textSize(20);
   // let fps = frameRate();
   // text("FFFPS: " + fps.toFixed(0), 100, 100);
-  // text("TouchY: " + touchStartY, 100, 120);
-  // text("DelatTouchY: " + deltaTouchY, 100, 150);
+  // // text("TouchY: " + touchStartY, 100, 120);
+  // // text("DelatTouchY: " + deltaTouchY, 100, 150);
+  //   text("width: " + width, 100, 120);
+  // text("height: " + height, 100, 150);
 
 
 
