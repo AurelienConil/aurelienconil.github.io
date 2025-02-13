@@ -2,447 +2,82 @@
 <html lang="en">
 
 <head>
-  <!-- meta -->
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Folio - Personal Portfolio Template</title>
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+  <title>Sketch</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
-
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link href="lib/hover/hover.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <!-- Responsive css -->
-  <link href="css/responsive.css" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.png">
-
-  <!-- =======================================================
-    Theme Name: Folio
-    Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="libraries/p5.min.js"></script>
 </head>
 
 <body>
 
-  <!-- start section navbar -->
-  <nav id="main-nav">
+  <div class="container retro-header  ">
+    <div class="row my-1 ">
+      <div class="col-6 px-0">
+        Aurelien Conil
+      </div>
+      <div class="col">
+      </div>
+      <div class="col-1 flag  ">
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="FR" class="flag"
+          onclick="changeLanguage('fr')"" >
+          </a>
+          <img src=" https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="EN"
+          class="flag" onclick="changeLanguage('en')">
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div id="canvas-container"></div>
+
+  <div class="container retro-menu">
     <div class="row">
-      <div class="container">
-
-        <div class="logo">
-          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
-        </div>
-
-        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
-
-        <ul class="nav-menu list-unstyled">
-          <li><a href="#header" class="smoothScroll">Accueil </a></li>
-          <li><a href="#about" class="smoothScroll">Bio </a></li>
-          <li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
-          <li><a href="#journal" class="smoothScroll">Asso</a></li>
-          <li><a href="#contact" class="smoothScroll">Contact</a></li>
-        </ul>
+      <div class="col-12 col-lg-5 my-5 order-2 order-lg-1">
+        <a href="http://aurelienconil.fr/digital-artist/" class="btn-retro"><span id="btn1"></span></a>
+      </div>
+      <div class="col-12 col-lg-1 my-5 order-1 order-lg-2">
+        <span class="bi bi-arrow-down-circle arrow" onclick="changeNext()"></span>
 
       </div>
-    </div>
-  </nav>
-  <!-- End section navbar -->
-
-
-  <!-- start section header -->
-  <div id="header" class="home">
-
-    <div class="container">
-      <div class="header-content">
-        <h1>Aurelien Conil</span></h1>
-        <h2><span class="typed"></span></h2>
-        <p>Developpeur, Maker, Formateur</p>
-
-        <ul class="list-unstyled list-social">
-          <li><a href="https://www.malt.fr/profile/aurelienconil"><i class="ion-link"></i></a></li>
-          <li><a href="https://github.com/aurelienconil"><i class="ion-social-github"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/aurelien-conil/"><i class="ion-social-linkedin"></i></a></li>
-        </ul>
+      <div class="col-12 col-lg-5 my-5  order-3 order-lg-3">
+        <a href="http://aurelienconil.github.io/friction" class="btn-retro"><span id="btn2"></span></a>
       </div>
     </div>
   </div>
-  <!-- End section header -->
-
-
-  <!-- start section about us -->
-  <div id="about" class="paddsection">
-    <div class="container">
-      <div class="row justify-content-between">
-
-        <div class="col-lg-4 ">
-          <div class="div-img-bg">
-            <div class="about-img">
-              <img src="images/me.jpg" class="img-responsive" alt="me">
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-7">
-          <div class="about-descr">
-
-            <p class="p-heading"> Je suis passionné de technologie et de création artistique.
-             <br> Je crée des liens entre arts et ingénierie.
-              <br> J'aime le numérique qui se questionne, l'artistique qui innove  </p>
-            <p class="separator"> Je conçois et réalise des systèmes vidéo, son, lumière, robotique, pour des projets artistiques, ludiques, et pédagogiques</p>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end section about us -->
-
-
-  <!-- start section services -->
-  <div id="services">
-    <div class="container">
-
-        <div class="services-carousel owl-theme">
-
-          <div class="services-block">
-
-            <i class="ion-code"></i>
-            <span>Dev</span>
-            <p class="separator">Python, Linux, OpenFrameworks, PureData, HTML, JS </p>
-
-          </div>
-
-          <div class="services-block">
-
-            <i class="ion-ios-lightbulb-outline"></i>
-            <span>Carte electroniques </span>
-            <p class="separator">Arduino, Raspberry Pi, ESP8266, leds WS2812,  </p>
-
-          </div>
-
-          <div class="services-block">
-
-            <i class="ion-ios-gear-outline"></i>
-            <span>Fabrication numérique</span>
-            <p class="separator">Impression 3D, Découpeuse laser</p>
-
-          </div>
-
-          <div class="services-block">
-
-            <i class="ion-ios-monitor-outline"></i>
-            <span>Régie de spectacle</span>
-            <p class="separator"> Ableton Live + MaxMsp, Madmapper, Resolume, </p>
-
-          </div>
-
-          <div class="services-block">
-
-            <i class="ion-university"></i>
-            <span>Pédagogie</span>
-            <p class="separator">Initiation au code, Atelier fablab, Médiation numérique, EAC  </p>
-
-          </div>
-
-          <div class="services-block">
-
-            <i class="ion-ios-mic-outline"></i>
-            <span> création sonore </span>
-            <p class="separator"> Composition, Enregistrement, Montage à l'image </p>
-
-          </div>
-
-        </div>
-
-    </div>
-
-  </div>
-  <!-- end section services -->
-
-
-  <!-- start section portfolio -->
-  <div id="portfolio" class="text-center paddsection">
-
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>Portfolio</h2>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-
-          <div class="portfolio-list">
-
-            <ul class="nav list-unstyled" id="portfolio-flters">
-              <li class="filter filter-active" data-filter=".all">tout</li>
-              <li class="filter" data-filter=".spectacle">spectacle</li>
-              <li class="filter" data-filter=".installation">installation</li>
-              <li class="filter" data-filter=".pedagogie">pédagogie</li>
-              <li class="filter" data-filter=".machine">machine</li>
-              <li class="filter" data-filter=".autre">autre</li>
-            </ul>
-
-          </div>
-
-          <div class="portfolio-container">
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all pedagogie machine">
-              <a  class="" href="lucibox.html">
-                <img src="images/portfolio/lucibox/lucibox.jpg" alt="img">
-                <div class="centered">Lucibox</div>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all spectacle">
-              <a class="" href="robot.html">
-                <img src="images/portfolio/robot/robot.jpg"  alt="img">
-                <div class="centered">Robot</div>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all spectacle">
-              <a class="" href="school.html">
-                <img src="images/portfolio/school/school.jpg" alt="img">
-                <div class="centered">School of Moon</div>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all spectacle">
-              <a class="" href="killing-robot.html">
-                <img src="images/portfolio/killing-robots/killing-robots.jpg" alt="img">
-                <div class="centered">Killing robots</div>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all spectacle">
-              <a class="" href="sniper.html">
-                <img src="images/portfolio/sniper/sniper.jpg" alt="img">
-                <div class="centered">Sniper Guerilla</div>
-
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all pedagogie">
-              <a class="" href="campus-numerique.html">
-                <img src="images/portfolio/campus/campus.jpg" alt="img">
-                <div class="centered">Campus Numérique</div>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all pedagogie autre">
-              <a class="" href="fabmanager.html">
-                <img src="images/portfolio/fabmanager/fabmanager.jpg" alt="img">
-                <div class="centered">FabManager </div>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all installation">
-              <a class="" href="la-voix-des-airs.html">
-                <img src="images/portfolio/la-voix-des-airs/la-voix-des-airs.jpg" alt="img">
-                 <div class="centered">La Voix des Airs</div>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all installation">
-              <a class="" href="tarentella.html">
-                <img src="images/portfolio/tarentella/tarentella.jpg" alt="img">
-                 <div class="centered"> Tarentella </div>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all machine">
-              <a class="" href="anima.html">
-                <img src="images/portfolio/anima/anima.jpg" alt="img">
-                 <div class="centered">Anima</div>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all ">
-              <a class="" href="fablab.html">
-                <img src="images/portfolio/fablab/fablab.jpg" alt="img">
-                <div class="centered">Réalisations Fablab</div>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all spectacle">
-              <a class="" href="au-pied-du-mur.html">
-                <img src="images/portfolio/au-pied-du-mur/au-pied-du-mur.jpg" alt="img">
-                <div class="centered">Au Pied Du Mur</div>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all pedagogie">
-              <a class="" href="creac.html">
-                <img src="images/portfolio/creac/creac.jpg" alt="img">
-                <div class="centered">CREAC ( éducation artistique ) </div>
-              </a>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all installation">
-              <a class="" href="mecanique-panorama.html">
-                <img src="images/portfolio/mecanique-panorama/mecanique-panorama.jpg" alt="img">
-                <div class="centered">Mécanique Panorama</div>
-              </a>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <!-- End section portfolio -->
-
-
-  <!-- start section journal -->
-  <div id="journal" class="text-left paddsection">
-
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>Association et Evenementiel</h2>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="journal-block">
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="journal-info">
-
-              <a target="_blank" href="http://assoundessens.fr"><img src="images/portfolio/undessens.jpg" class="img-responsive" alt="img"></a>
-
-              <div class="journal-txt">
-
-                <h4><a target="_blank" href="http://assoundessens.fr">Association Un Des Sens</a></h4>
-                <p class="separator">Spectacle et installation interactives
-                </p>
-
-              </div>
-
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="journal-info">
-
-              <a target="_blank" href="https://www.arcan.io/dna2019/"><img src="images/portfolio/dna.jpg" class="img-responsive" alt="img"></a>
-
-              <div class="journal-txt">
-
-                <h4><a target="_blank" href="https://www.arcan.io/dna2019/">Festival DN[A] </a></h4>
-                <p class="separator"> Festival Art Numérique
-                </p>
-
-              </div>
-
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <!-- End section journal -->
-
-
-  <!-- start sectoion contact -->
-  <div id="contact" class="paddsection">
-    <div class="container">
-      <div class="contact-block1">
-        <div class="row">
-
-          <div class="col-lg-6">
-            <div class="contact-contact">
-
-              <h2 class="mb-30">GET IN TOUCH</h2>
-
-              <ul class="contact-details">
-                <li><span>Envoyez moi un email</span></li>
-                <li><span>ou contactez-moi </span></li>
-                <li><span><a href="https://www.linkedin.com/in/aurelien-conil/">via Linkedin</a></span></li>
-                <li><span><a href="https://www.malt.fr/profile/aurelienconil">via Malte</a></span></li>
-              </ul>
-
-            </div>
-          </div>
-
-         <div id="wufoo-mz743911njm64q"> Fill out my <a href="https://conil.wufoo.com/forms/mz743911njm64q">online form</a>. </div> <script type="text/javascript"> var mz743911njm64q; (function(d, t) { var s = d.createElement(t), options = { 'userName':'conil', 'formHash':'mz743911njm64q', 'autoResize':true, 'height':'437', 'async':true, 'host':'wufoo.com', 'header':'show', 'ssl':true }; s.src = ('https:' == d.location.protocol ?'https://':'http://') + 'secure.wufoo.com/scripts/embed/form.js'; s.onload = s.onreadystatechange = function() { var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return; try { mz743911njm64q = new WufooForm(); mz743911njm64q.initialize(options); mz743911njm64q.display(); } catch (e) { } }; var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr); })(document, 'script'); </script>
-      </div>
-    </div>
-  </div>
-  <!-- start sectoion contact -->
-
-
-  <!-- start section footer -->
-  <div id="footer" class="text-center">
-    <div class="container">
-      <div class="socials-media text-center">
-
-        <ul class="list-unstyled ">
-          <li><a href="https://www.malt.fr/profile/aurelienconil"><i class="ion-link"></i></a></li>
-          <li><a href="https://github.com/aurelienconil"><i class="ion-social-github"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/aurelien-conil/"><i class="ion-social-linkedin"></i></a></li>
-        </ul>
-
-
-
-      </div>
-
-      <p>&copy; Copyrights Folio. All rights reserved.</p>
-
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio
-        -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-
-    </div>
-  </div>
-  <!-- End section footer -->
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/typed/typed.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-  <script src="lib/isotope/isotope.pkgd.min.js"></script>
-
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="ShaderSources.js"></script>
+  <script src="agent.js">  </script>
+  <script src="segment14.js"></script>
+  <script src="sketch.js"></script>
+
+  <script>
+    // Fonction pour changer le contenu des boutons
+    function changeLanguage(lang) {
+      const btn1 = document.getElementById("btn1");
+      const btn2 = document.getElementById("btn2");
+
+      if (lang === "fr") {
+        btn1.textContent = "Explorations artistiques";  // Texte en français
+        btn2.textContent = "Ingénierie créative";  // Texte en français
+      } else if (lang === "en") {
+        btn1.textContent = "Selected Artworks";  // Texte en anglais
+        btn2.textContent = "R&D Prototyping";  // Texte en anglais
+      }
+    }
+
+    // Initialisation avec la langue par défaut (français)
+    changeLanguage('en');
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,105 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: "IBM Plex Mono", serif;
+  font-weight: 100;
+  font-style: normal;
+  text-align: center;
+}
+
+canvas {
+  display: inline-block;
+}
+
+#canvas-container {
+  position: static;
+  top: 200px;
+  /* Adjust the position as needed */
+  left: 0px;
+  /* Adjust the position as needed */
+  border: 1px solid black;
+  /* Optional: add a border to see the container */
+}
+
+
+
+.btn-retro {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 0em;
+  font-size: 20px;
+  color: rgb(228, 228, 228);
+  text-transform: none;
+  text-decoration: none;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-retro:hover {
+  background-color: rgb(195, 223, 250);
+  color: #111;
+  box-shadow: 2px 2px 0px rgb(28, 12, 54);
+}
+
+
+.retro-header {
+  color: rgb(252, 254, 255);
+  font-weight: 200;
+  font-size: 23px;
+  width: 100%;
+  margin-top: 0px;
+  max-height: min-content;
+  max-width: none;
+  margin: 50px auto;
+  border: 1px solid rgb(32, 32, 32);
+  background-color: #000000;
+}
+
+.retro-menu {
+  color: aliceblue;
+  align-content: center;
+  width: 100%;
+  max-width: none;
+  margin-bottom: 10em;
+  border: 1px solid rgb(34, 34, 34);
+  box-shadow: 4px 4px 0px rgb(24, 24, 24);
+  background-color: #000000;
+  border-collapse: collapse;
+  /* Enlever l'espacement entre les cellules */
+}
+
+.arrow {
+  font-size: 50px;
+  /* Taille de l'icône */
+  display: block;
+  margin: 0 0;
+  /* Centre horizontalement */
+  text-align: center;
+  color: #4d4c4c;
+  /* Couleur de l'icône, peut être modifiée */
+}
+
+.name-cell {
+  text-align: center;
+  font-weight: bold;
+}
+
+.lang-cell {
+  text-align: right;
+}
+
+.flag {
+  flex: auto;
+  width: 32px;
+  height: auto;
+  margin-left: 10px;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 0px rgb(65, 65, 65));
+}
+
+.flag:hover {
+  transform: scale(1.1);
+}
